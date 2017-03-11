@@ -11,7 +11,7 @@ section {
 }
 
 .jumbotron {
-    background: url(../img/site_showcase_bg.jpg) no-repeat top center;
+    background: #1b222a url(../img/site_showcase_bg.jpg) no-repeat top center;
     color: white;
     height: 598px;
     overflow: none;
@@ -34,6 +34,10 @@ div.jumbotron img.app-btn {
     margin-right: 30px;
 }
 
+.col-md-4{
+    margin-bottom: 20px;
+}
+
 .demo {
     width: 100%;
     padding: 3px;
@@ -53,6 +57,23 @@ section#feature ul li {
     line-height:2em;
 }
 
+section#feature ul {
+    padding: 0;
+    margin:0;
+}
+
+section#title-bar{
+    padding:0;
+    margin:0;
+    height: 80px;
+    background: #1caa98;
+    color: #fff;
+}
+
+section#title-bar h1 {
+    margin-bottom: 20px;
+}
+
 footer {
     background: #333;
     color: #fff;
@@ -64,3 +85,57 @@ footer li {
     padding: 0 10px 0 10px;
     list-style: none;
 }
+
+/*MEDIA QUERY - under 1200 pixels add these css changes*/
+@media(max-width: 1200px){
+}
+@media(max-width: 991px){
+    .showcase-img {
+        display: none;
+    }
+}
+@media(max-width: 768px){
+    .jumbotron{
+        height: 350px !important;
+        background-size: 100% 100%;
+    }
+    .jumbotron h1{
+        margin-top: 10px;
+    }
+}
+@media(max-width: 500px){
+    .jumbotron{
+        height: 450px !important;
+        background-image: none;
+        text-align: center;
+    }
+    div.jumbotron img.app-btn {
+        width:60%;
+        margin:0 auto 30px auto;
+        display: block;
+    }
+    section#feature ul li{
+        font-size: 19px !important;
+    }
+    footer p{
+        float:none;
+        text-align: center;
+        padding-top: 20px;
+    }
+}
+/*Over 768 and below 990 apply these styles*/
+@media(min-width: 768px) and (max-width: 990px){
+    div.jumbotron img.app-btn {
+        width:30%;
+    }
+
+    .jumbotron{
+        height: 400px !important;
+        background-size: 100% 100%;
+    }
+
+    .jumbotron h1{
+        margin-top: 10px;
+    }
+}
+
